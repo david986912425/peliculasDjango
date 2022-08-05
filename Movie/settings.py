@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-vdlm_proz+j+dj=u#n8-n3=qd0yj2588n9b9_@=-ht&jr$&e8@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
