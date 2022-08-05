@@ -3,7 +3,7 @@ var swiper = new Swiper(".popular-content", {
   spaceBetween: 10,
   centeredSliders: true,
   autoplay: {
-    delay:2500,
+    delay:7500,
     disableOnInteraction: false,
   },
   pagination: {
@@ -24,15 +24,15 @@ var swiper = new Swiper(".popular-content", {
       spaceBetween: 10,
     },
     510:{
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     758:{
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 15,
     },
     900:{
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 10,
     },
 

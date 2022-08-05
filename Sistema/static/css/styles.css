@@ -16,6 +16,14 @@
     --container-color: #2d2e37;
     --text--color: #fcfEff;
 }
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+
 
 a{
     text-decoration: none;
@@ -25,7 +33,7 @@ li {
 }
 img {
     width: 100%;
-
+    
 }
 body {
     
@@ -195,4 +203,42 @@ section {
 .tags span {
     background-color: var(--container-color);
     padding: 0 4px;
+}
+.movie-box{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    
+    
+}
+.movie-box:hover .movie-box-img{
+    transform: scale(1.1);
+    transition: 0.5s;
+    
+}
+.movie-box-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.movie-box .box-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1068px) {
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+}
+@media (max-width: 991px) {
+    .movie-box {
+        height: 300px;
+    }
+
 }
