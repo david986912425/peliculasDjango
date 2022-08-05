@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} {% endblock %}</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "/css/styles.css" %}">
+    <!--LInk swip css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <!--ICONS-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+    <header>
+        
+        <div class="nav container">
+            <a class="logo">Peliculas</a>
+            <div class="search-box">
+                <input type="search" class="search-input" placeholder="Search">
+                <i class='bx bx-search'></i>
+            </div>
+
+        </div>
+    </header>
+
+    {% block contenido %} {% endblock %}
+
+    
+
+    
+</body>
+</html>
+
+{% block extra_js %}
+{% endblock extra_js %}
+

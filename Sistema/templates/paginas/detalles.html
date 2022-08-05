@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %} Detalles {% endblock %}
+
+{% block contenido %} 
+
+<div class="play-container container">
+    <img src="{{ movie.portada }}" class="play-img" alt="" />
+    <div class="play-text">
+        <h2>{{ movie.titulo }}</h2>
+        <p>{{ movie.descripcion }}</p>
+        <div class="tags">
+            {% for item in genero %}
+            <span>{{ item.idgenero.genero }}</span>
+            {% endfor %}
+            <span>1h:49m</span>
+        </div>
+        <a href="{{ movie.link }}" class="watch-btn">
+            <i class='bx bx-play' ></i>
+            <span>Reproducir</span>
+        </a>
+    </div
+
+</div>
+
+{% endblock %}

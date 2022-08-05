@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %} 
+
+
+{% for movie in movie %}
+<section class="home container">
+    <img src="{{ movie.portada }}" class="home-img">
+    <div class="home-text">
+        <h1 class="home-title">{{ movie.titulo }}</h1>
+        <a href="/detalles/{{ movie.slug}}" class="watch-btn">
+            <i class='bx bx-play' ></i>
+            <span>Reproducir</span>
+        </a>
+    </div>
+</section>
+{% endfor %}
+
+<section class="popular container" >
+
+    <div class="heading">
+        <h2 class="heading-tittle">Popular</h2>
+    </div>
+
+    <!--contenido-->
+    <div class="popular-content swiper ">
+        <div class="swiper-wrapper">
+            <!-- Pelicula 1 -->
+            {% for moviePopular in moviePopular %}
+            <a class="swiper-slide" href="/detalles/{{ moviePopular.slug}}">
+                <div class="movie-box">
+                    <img src="{{ moviePopular.imagen }}" alt="" class="movie-box-img">
+                    <div class="box-text">
+                        <h2 class="movie-title"></h2>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+
+            
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="{% static "js/main.js" %}"></script>
+{% endblock extra_js %}
