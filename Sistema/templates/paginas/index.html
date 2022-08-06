@@ -6,7 +6,7 @@
 
 
 {% for movie in movie %}
-<section class="home container">
+<section class="home container" id="home">
     <img src="{{ movie.portada }}" class="home-img">
     <div class="home-text">
         <h1 class="home-title">{{ movie.titulo }}</h1>
@@ -18,7 +18,7 @@
 </section>
 {% endfor %}
 
-<section class="popular container" >
+<section class="popular container" id="peliculas-popular" >
 
     <div class="heading">
         <h2 class="heading-tittle">Popular</h2>
@@ -31,7 +31,7 @@
             {% for moviePopular in moviePopular %}
             <a class="swiper-slide" href="/detalles/{{ moviePopular.slug}}">
                 <div class="movie-box">
-                    <img src="{{ moviePopular.imagen }}" alt="" class="movie-box-img">
+                    <img src="{{ moviePopular.imagen }}" alt="" class="movie-box-img"> </img>
                     <div class="box-text">
                         <h2 class="movie-title"></h2>
                     </div>

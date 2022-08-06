@@ -13,15 +13,20 @@
     --main-color: #ffb43a;
     --pane-padding: hsl(37,94%,57%);
     --body-color: #1e1e2a;
+    --body-color2: #242433;
     --container-color: #2d2e37;
     --text--color: #fcfEff;
+}
+html{
+    scroll-behavior: smooth;
 }
 html::-webkit-scrollbar{
     width: 0.5rem;
     background: transparent;
 }
 html::-webkit-scrollbar-thumb{
-    background: var(--main-color);
+    border-radius: 6px;
+    background: linear-gradient(transparent,var(--main-color)) ;
 }
 
 
@@ -35,6 +40,7 @@ img {
     width: 100%;
     
 }
+
 body {
     
     background: var(--body-color);
@@ -73,7 +79,49 @@ header {
     margin: 0 auto 0 0;
 
 }
-
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.nav-link{
+    font-size: 0.94rem;
+    padding: 4px 4px;
+    border-radius: 0.2rem;
+    color: var(--text--color);
+}
+.nav-link:hover{
+    color: var(--main-color);
+    background: var(--container-color);
+    transition: 0.3s all linear;
+}
+/*¨MENU ICONS*/
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+.menu-icon div{
+    display: block;
+    background: var(--text--color);
+    height: 2px;
+    width: 24px;
+    transition: 0.3s;
+}
+.move .line1{
+    transform:rotate(-45deg) translate(-5px,5px);
+}
+.move .line2{
+    opacity: 0;
+}
+.move .line3{
+    transform:rotate(45deg) translate(-5px,-5px);
+}
 section {
     padding: 2rem 0 2rem;
 }
@@ -240,5 +288,35 @@ section {
     .movie-box {
         height: 300px;
     }
+
+}
+@media (max-width: 780px) {
+    .menu-icon{
+        display: flex;
+    }
+    .navbar{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--body-color2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        transition: 0.5s all cubic-bezier(0.075,0.82,0.165,1);
+    }
+    .open-menu{
+        right: 0;
+        transition: 0.5s all cubic-bezier(0.075,0.82,0.165,1);
+    }
+    .nav-link {
+        display: block;
+        margin: 1rem 0;
+
+    }
+
+
 
 }
