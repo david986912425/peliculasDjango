@@ -51,7 +51,7 @@ body {
 }
 
 .container{
-    max-width: 1068px;
+    max-width: 90%;
     margin: auto;
     width: 100%;
 }
@@ -164,6 +164,7 @@ section {
    margin-top: 5rem;
    border-radius: 0.5rem;
    background: linear-gradient(rgba(30, 30, 42, .14) 0%, rgba(30, 30, 42, .74) 150%);
+   
 }
 
 .home-img{
@@ -209,6 +210,7 @@ section {
     background-color: var(--container-color);
     padding: 8px 14px;
     border: 1px solid hsl(200 100% 99% / 5%);
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 .heading-tittle{
