@@ -14,8 +14,8 @@ class Movie(models.Model):
     idmovie = models.AutoField(primary_key=True)
     titulo = models.CharField(max_length=100,verbose_name = "Titulo")
     slug = AutoSlugField(populate_from="titulo",unique=True, null=True,verbose_name = "Slug")
-    imagen = models.CharField(max_length=200,verbose_name = "Imagen")
-    portada = models.CharField(max_length=200,verbose_name = "Portada")
+    imagen = models.TextField(verbose_name = "Imagen")
+    portada = models.TextField(verbose_name = "Portada")
     descripcion = models.TextField(verbose_name = "Descripcion", null=True)
     link = models.TextField(verbose_name = "Link", null=True)
     genero = models.ManyToManyField(
