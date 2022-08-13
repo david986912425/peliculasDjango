@@ -7,7 +7,7 @@
 
 {% for movie in movie %}
 <section class="home container" id="home">
-    <img src="{{ movie.portada }}" class="home-img">
+    <img src="{{ movie.portada.url }}" class="home-img">
     <div class="home-text">
         <h1 class="home-title">{{ movie.titulo }}</h1>
         <a href="/detalles/{{ movie.slug}}" class="watch-btn">
@@ -32,7 +32,7 @@
             {% for movieAnimacion in movieAnimacion %}
             <a class="swiper-slide" href="/detalles/{{ movieAnimacion.slug}}">
                 <div class="movie-box">
-                    <img src="{{ movieAnimacion.idmovie.imagen }}" alt="" class="movie-box-img"> </img>
+                    <img src="{{ movieAnimacion.idmovie.imagen.url }}" alt="" class="movie-box-img"> </img>
                     <div class="box-text">
                         <h2 class="movie-title"></h2>
                     </div>
@@ -59,7 +59,7 @@
             {% for movieAventura in movieAventura %}
             <a class="swiper-slide" href="/detalles/{{ movieAventura.slug}}">
                 <div class="movie-box">
-                    <img src="{{ movieAventura.idmovie.imagen }}" alt="" class="movie-box-img"> </img>
+                    <img src="{{ movieAventura.idmovie.imagen.url }}" alt="" class="movie-box-img"> </img>
                     <div class="box-text">
                         <h2 class="movie-title"></h2>
                     </div>
@@ -86,7 +86,7 @@
             {% for movieComedia in movieComedia %}
             <a class="swiper-slide" href="/detalles/{{ movieComedia.slug}}">
                 <div class="movie-box">
-                    <img src="{{ movieComedia.idmovie.imagen }}" alt="" class="movie-box-img"> </img>
+                    <img src="{{ movieComedia.idmovie.imagen.url }}" alt="" class="movie-box-img"> </img>
                     <div class="box-text">
                         <h2 class="movie-title"></h2>
                     </div>

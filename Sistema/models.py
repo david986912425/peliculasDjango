@@ -1,5 +1,6 @@
 from django.db import models
 from autoslug import AutoSlugField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Genero(models.Model):
@@ -14,8 +15,8 @@ class Movie(models.Model):
     idmovie = models.AutoField(primary_key=True)
     titulo = models.CharField(max_length=100,verbose_name = "Titulo")
     slug = AutoSlugField(populate_from="titulo",unique=True, null=True,verbose_name = "Slug")
-    imagen = models.TextField(verbose_name = "Imagen")
-    portada = models.TextField(verbose_name = "Portada")
+    imagen = CloudinaryField(folder='Movie',verbose_name = "Imagen",null=True,blank=True)
+    portada = CloudinaryField(folder='Movie',verbose_name = "Portada",null=True,blank=True)
     descripcion = models.TextField(verbose_name = "Descripcion", null=True)
     link = models.TextField(verbose_name = "Link", null=True)
     genero = models.ManyToManyField(

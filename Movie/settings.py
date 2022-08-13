@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
-from pickle import FALSE
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vdlm_proz+j+dj=u#n8-n3=qd0yj2588n9b9_@=-ht&jr$&e8@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = FALSE
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
     'Sistema'
 ]
 
@@ -142,6 +145,12 @@ STATICFILES = (os.path.join(BASE_DIR, 'static'))
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+cloudinary.config( 
+  cloud_name = "diyjxluth", 
+  api_key = "377637533496122", 
+  api_secret = "pPTxtbY4-ZQ8Z3yIHj_lvRxKa8o",
+)
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
